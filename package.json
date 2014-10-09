@@ -1,0 +1,62 @@
+{
+  "name": "selah",
+  "version": "0.0.0",
+  "scripts": {
+    "fix": "rm -rf vendor && mkdir vendor && derequire < ./bower_components/ember/ember.js > ./vendor/ember.js && derequire < ./bower_components/ember-data/ember-data.js > ./vendor/ember-data.js",
+    "postinstall": "bower install && npm run fix",
+    "start": "node index"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim",
+      [
+        "hbsfy",
+        {
+          "precompiler": "ember-template-compiler",
+          "compiler": "Ember.Handlebars"
+        }
+      ]
+    ]
+  },
+  "browserify-shim": "./shims.js",
+  "browser": {
+    "handlebars": "./bower_components/handlebars/handlebars.runtime.js",
+    "jquery": "./bower_components/jquery/dist/jquery.js",
+    "ember": "./vendor/ember.js",
+    "ember-data": "./vendor/ember-data.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.3.3",
+    "express": "^4.9.0",
+    "express-handlebars": "^1.1.0",
+    "express-session": "^1.8.2",
+    "morgan": "^1.3.0",
+    "socket.io": "^1.1.0",
+    "socket.io-client": "^1.1.0"
+  },
+  "devDependencies": {
+    "ember-template-compiler": "^1.6.1",
+    "derequire": "^1.0.0",
+    "browserify": "^5.11.2",
+    "browserify-shim": "^3.7.0",
+    "watchify": "^1.0.2",
+    "emberate": "^1.0.1",
+    "hbsfy": "^2.1.0",
+    "gaze": "^0.6.4",
+    "gulp": "^3.6.2",
+    "gulp-clean": "^0.2.4",
+    "gulp-less": "^1.2.3",
+    "gulp-livereload": "^2.1.0",
+    "gulp-util": "^2.2.16",
+    "gulp-watch": "^0.6.5",
+    "gulp-jshint": "^1.8.4",
+    "gulp-jscs": "^1.1.2",
+    "gulp-rename": "^1.2.0",
+    "vinyl-source-stream": "^0.1.1",
+    "pretty-hrtime": "^0.2.1",
+    "jshint-stylish": "^0.4.0",
+    "minimist": "^1.1.0",
+    "mkdirp": "^0.3.5",
+    "goat": "^0.4.1"
+  }
+}
