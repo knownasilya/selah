@@ -1,4 +1,0 @@
-selah
-=====
-
-Distributed realtime presentation
