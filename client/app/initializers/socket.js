@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:4200');
+var socket = io.connect('http://localhost:3000');
 
 export var initialize = function(container, application) {
   container.register('socket:main', socket, { singleton: true, instantiate: false });

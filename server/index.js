@@ -32,7 +32,8 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
-app.use('/', express.static(path.join(__dirname, '..', 'dist')));
+app.use('/', express.static(path.join(__dirname, '..', 'client', 'dist')));
+app.use('/viewer', express.static(path.join(__dirname, '..', 'viewer', 'dist')));
 
 app.get('/', function (req, res) {
   console.log(req.session);
