@@ -42,6 +42,8 @@ app.get('/', function (req, res) {
   });
 });
 
+app.use('/api', require('./api'));
+
 app.get('/api/presentations/:id', function (req, res) {
   var id = req.param('id');
 

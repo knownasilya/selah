@@ -6,6 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('session', { path: '/session/:presentation_session_id' });
 });
 
 export default Router;

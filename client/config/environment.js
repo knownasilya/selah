@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'selah',
+    podModulePrefix: 'selah/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'hash',
