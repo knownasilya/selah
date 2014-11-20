@@ -1,5 +1,8 @@
 @import 'libs.less';
 
+@muted: #B0B0B0;
+@enabled: #59B54E;
+
 html,
 body {
   margin: 0;
@@ -16,4 +19,16 @@ h2 {
 
 .inline {
   display: inline;
+}
+
+.viewers-list {
+  margin-top: 0.8em;
+
+  .no-viewers {
+    color: @muted;
+  }
+}
+
+.enabled {
+  color: @enabled;
 }

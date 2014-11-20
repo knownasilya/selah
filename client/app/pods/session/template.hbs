@@ -21,15 +21,31 @@
 </div>
 
 <div class="row">
-  <div class="col-xs-12">
-    {{#if viewers.isFulfilled}}
-      <ul class="list-unstyled">
-        {{#each viewers}}
-          <li>{{name}}</li>
+  <div class="col-sm-9">
+    <p>{{summary}}</p>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="viewers-list panel panel-default">
+      <div class="panel-body">
+        Participating Viewers
+      </div>
+
+      <div class="list-group">
+        {{#if viewers.isFulfilled}}
+          {{#each viewers}}
+            {{#link-to 'index' class='list-group-item'}}
+              {{name}} <i class="fa fa-comment enabled pull-right"></i>
+            {{/link-to}}
+          {{else}}
+            <div class="list-group-item no-viewers">
+              No Viewers
+            </div>
+          {{/each}}
         {{else}}
-          <li>No Viewers</li>
-        {{/each}}
-      </ul>
-    {{/if}}
+          Loading..
+        {{/if}}
+      </div>
+    </div>
   </div>
 </div>

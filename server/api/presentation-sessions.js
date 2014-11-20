@@ -10,6 +10,7 @@ router.route('/')
         {
           id: 1,
           name: 'Test Session',
+          summary: 'This is the best presentation session that could ever be. We hope you enjoy it!',
           created: new Date(),
           started: new Date(),
           active: true,
@@ -36,6 +37,7 @@ router.route('/:id')
       presentationSession: {
         id: id,
         name: 'Test Session',
+        summary: 'This is the best presentation session that could ever be. We hope you enjoy it!',
         created: new Date(),
         started: new Date(),
         active: true,

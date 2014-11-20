@@ -5,6 +5,7 @@ var hasMany = DS.hasMany;
 
 export default DS.Model.extend({
   name: attr('string'),
+  summary: attr('string'),
   active: attr('boolean'),
   created: attr('date'),
   started: attr('date'),
