@@ -4,7 +4,7 @@
       {{name}}
     </h2>
 
-    {{#if active}}
+    {{#if started}}
       <span class="label label-success">Live</span>
     {{else}}
       <span class="label label-default">Offline</span>
@@ -23,6 +23,7 @@
 <div class="row">
   <div class="col-sm-9">
     <p>{{summary}}</p>
+    {{scheduledStart}}
   </div>
 
   <div class="col-sm-3">
