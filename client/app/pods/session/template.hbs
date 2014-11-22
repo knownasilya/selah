@@ -23,7 +23,17 @@
 <div class="row">
   <div class="col-sm-9">
     <p>{{summary}}</p>
-    {{scheduledStart}}
+    <p>
+      {{#if yetToStart}}
+        This session is scheduled to start in <b>{{timeToStart}}</b>.
+      {{else}}
+        {{#if ended}}
+          This session ended at {{pretty ended}}.
+        {{else}}
+          This session has been live for {{runningFor}}.
+        {{/if}}
+      {{/if}}
+    </p>
   </div>
 
   <div class="col-sm-3">

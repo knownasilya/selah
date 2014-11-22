@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node index",
     "build": "cd client && ember build && cd ../viewer && ember build",
-    "test": "cd client && ember test && cd ../viewer && ember test"
+    "test": "cd client && ember test && cd ../viewer && ember test",
+    "watch": "cd client && ember build --watch & cd viewer && ember build --watch"
   },
   "repository": "https://github.com/stefanpenner/ember-cli",
   "engines": {

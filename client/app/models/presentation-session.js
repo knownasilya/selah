@@ -8,6 +8,7 @@ export default DS.Model.extend({
   summary: attr('string'),
   created: attr('date'),
   started: attr('date'),
+  ended: attr('date'),
   scheduledStart: attr('date'),
 
   admins: hasMany('user', { async: true }),

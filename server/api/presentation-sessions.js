@@ -13,7 +13,7 @@ router.route('/')
           summary: 'This is the best presentation session that could ever be. We hope you enjoy it!',
           created: new Date(),
           started: new Date(),
-          scheduledStart: new Date().setDate(20),
+          scheduledStart: new Date().setHours(18),
           admins: [1],
           viewers: [],
           presentables: [1]
@@ -40,7 +40,7 @@ router.route('/:id')
         summary: 'This is the best presentation session that could ever be. We hope you enjoy it!',
         created: new Date(),
         started: new Date(),
-        scheduledStart: new Date().setDate(20),
+        scheduledStart: new Date().setHours(18),
         admins: [1],
         viewers: [],
         presentables: [1]
