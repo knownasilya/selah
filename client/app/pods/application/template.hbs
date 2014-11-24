@@ -8,7 +8,11 @@
 
     <div class="col-xs-2">
       <div class="right-bar">
-        {{#link-to 'login' class='btn btn-link'}}Login{{/link-to}}
+        {{#if authService.user}}
+          <img {{bind-attr src=authService.user.gravatarUrl}} width="30" class="img-circle"> {{authService.user.name}}
+        {{else}}
+          {{#link-to 'login' class='btn btn-link'}}Login{{/link-to}}
+        {{/if}}
       </div>
     </div>
   </div>
