@@ -22,6 +22,7 @@ app.import('bower_components/socket.io-client/socket.io.js');
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 app.import('bower_components/moment/moment.js');
 app.import('bower_components/js-md5/js/md5.js');
+app.import('bower_components/marked/lib/marked.js');
 
 // Copy fontawesome fonts
 var fonts = pickFiles('bower_components/fontawesome/fonts', {

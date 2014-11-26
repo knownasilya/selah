@@ -1,5 +1,9 @@
 <div class="row">
   <div class="col-xs-12">
+    {{#if authService.user}}
+      {{#link-to 'presentations.new'}}New Presentation{{/link-to}}
+    {{/if}}
+
     <ul class="list-unstyled">
       {{#each model}}
         <li>{{#link-to 'session' id}}{{name}}{{/link-to}}</li>

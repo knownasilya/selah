@@ -1,1 +1,21 @@
 Create New Presentation
+<div class="form-group">
+  {{input type='text' placeholder='Title' value=title}}
+</div>
+
+<a {{action 'addSlide'}} class="btn btn-link">Add Slide</a>
+
+<div class="row">
+  <div class="col-sm-4">
+    {{#each slide in model.slides}}
+      <div class="form-group slide-preview" {{action 'selectSlide' slide}}>
+        {{markdown-section content=slide.contents}}
+      </div>
+    {{/each}}
+  </div>
+
+  <div class="col-sm-8">
+    {{textarea value=selectedSlide.contents class='form-control'}}
+    {{markdown-section content=selectedSlide.contents}}
+  </div>
+</div>
