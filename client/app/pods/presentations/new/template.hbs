@@ -15,7 +15,9 @@ Create New Presentation
   </div>
 
   <div class="col-sm-8">
-    {{textarea value=selectedSlide.contents class='form-control'}}
-    {{markdown-section content=selectedSlide.contents}}
+    {{#if selectedSlide}}
+      {{textarea value=selectedSlide.contents class='form-control'}}
+      {{markdown-section content=selectedSlide.contents}}
+    {{/if}}
   </div>
 </div>
